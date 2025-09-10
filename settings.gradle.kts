@@ -8,6 +8,6 @@ pluginManagement {
     }
 }
 
-rootProject.name = "MarkDEditor"
+rootProject.name = "MDEditor"
 include(":app")
-include(":markdeditor")
+include(":mdeditor")

@@ -11,14 +11,14 @@
        android:layout_width="match_parent"
        android:layout_height="match_parent">
 
-      <xute.markdeditor.MarkDEditor
+      <com.armchairsoftware.mdeditor.MDEditor
           android:id="@+id/mdEditor"
           android:layout_width="match_parent"
           android:layout_height="match_parent" />
 
    </ScrollView>
 
-   <xute.markdeditor.EditorControlBar
+   <com.armchairsoftware.mdeditor.EditorControlBar
        android:id="@+id/controlBar"
        android:layout_alignParentBottom="true"
        android:layout_width="match_parent"

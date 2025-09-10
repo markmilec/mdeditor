@@ -1,11 +1,11 @@
-package xute.markdeditor.models;
+package com.armchairsoftware.mdeditor.models;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
 
-import xute.markdeditor.datatype.DraftDataItemModel;
+import com.armchairsoftware.mdeditor.datatype.DraftDataItemModel;
 
 public class DraftModel {
   public static final int ITEM_TYPE_TEXT = 0;

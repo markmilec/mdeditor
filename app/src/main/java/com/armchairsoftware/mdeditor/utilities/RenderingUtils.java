@@ -1,29 +1,29 @@
-package xute.markdeditor.utilities;
+package com.armchairsoftware.mdeditor.utilities;
 
 import android.util.Log;
 
 import java.util.ArrayList;
 
-import xute.markdeditor.MarkDEditor;
-import xute.markdeditor.datatype.DraftDataItemModel;
-import xute.markdeditor.models.DraftModel;
+import com.armchairsoftware.mdeditor.MDEditor;
+import com.armchairsoftware.mdeditor.datatype.DraftDataItemModel;
+import com.armchairsoftware.mdeditor.models.DraftModel;
 
-import static xute.markdeditor.Styles.TextComponentStyle.BLOCKQUOTE;
-import static xute.markdeditor.Styles.TextComponentStyle.H1;
-import static xute.markdeditor.Styles.TextComponentStyle.H2;
-import static xute.markdeditor.Styles.TextComponentStyle.H3;
-import static xute.markdeditor.Styles.TextComponentStyle.H4;
-import static xute.markdeditor.Styles.TextComponentStyle.H5;
-import static xute.markdeditor.Styles.TextComponentStyle.NORMAL;
-import static xute.markdeditor.components.TextComponentItem.MODE_OL;
-import static xute.markdeditor.components.TextComponentItem.MODE_PLAIN;
-import static xute.markdeditor.components.TextComponentItem.MODE_UL;
+import static com.armchairsoftware.mdeditor.Styles.TextComponentStyle.BLOCKQUOTE;
+import static com.armchairsoftware.mdeditor.Styles.TextComponentStyle.H1;
+import static com.armchairsoftware.mdeditor.Styles.TextComponentStyle.H2;
+import static com.armchairsoftware.mdeditor.Styles.TextComponentStyle.H3;
+import static com.armchairsoftware.mdeditor.Styles.TextComponentStyle.H4;
+import static com.armchairsoftware.mdeditor.Styles.TextComponentStyle.H5;
+import static com.armchairsoftware.mdeditor.Styles.TextComponentStyle.NORMAL;
+import static com.armchairsoftware.mdeditor.components.TextComponentItem.MODE_OL;
+import static com.armchairsoftware.mdeditor.components.TextComponentItem.MODE_PLAIN;
+import static com.armchairsoftware.mdeditor.components.TextComponentItem.MODE_UL;
 
 public class RenderingUtils {
-  private MarkDEditor markDEditor;
+  private MDEditor mdEditor;
 
-  public void setEditor(MarkDEditor markDEditor) {
-    this.markDEditor = markDEditor;
+  public void setEditor(MDEditor mdEditor) {
+    this.mdEditor = mdEditor;
   }
 
   public void render(ArrayList<DraftDataItemModel> contents) {
@@ -64,7 +64,7 @@ public class RenderingUtils {
    * @param item model of text data item
    */
   private void renderPlainData(DraftDataItemModel item) {
-    markDEditor.setCurrentInputMode(MODE_PLAIN);
+    mdEditor.setCurrentInputMode(MODE_PLAIN);
     switch (item.getStyle()) {
       case NORMAL:
       case H1:
@@ -73,12 +73,12 @@ public class RenderingUtils {
       case H4:
       case H5:
       case BLOCKQUOTE:
-        markDEditor.addTextComponent(getInsertIndex(), item.getContent());
-        markDEditor.setHeading(item.getStyle());
+        mdEditor.addTextComponent(getInsertIndex(), item.getContent());
+        mdEditor.setHeading(item.getStyle());
         break;
       default:
-        markDEditor.addTextComponent(getInsertIndex(), item.getContent());
-        markDEditor.setHeading(NORMAL);
+        mdEditor.addTextComponent(getInsertIndex(), item.getContent());
+        mdEditor.setHeading(NORMAL);
     }
   }
 
@@ -88,8 +88,8 @@ public class RenderingUtils {
    * @param item model of text data item.
    */
   private void renderOrderedList(DraftDataItemModel item) {
-    markDEditor.setCurrentInputMode(MODE_OL);
-    markDEditor.addTextComponent(getInsertIndex(), item.getContent());
+    mdEditor.setCurrentInputMode(MODE_OL);
+    mdEditor.addTextComponent(getInsertIndex(), item.getContent());
   }
 
   /**
@@ -98,15 +98,15 @@ public class RenderingUtils {
    * @param item model of text data item.
    */
   private void renderUnOrderedList(DraftDataItemModel item) {
-    markDEditor.setCurrentInputMode(MODE_UL);
-    markDEditor.addTextComponent(getInsertIndex(), item.getContent());
+    mdEditor.setCurrentInputMode(MODE_UL);
+    mdEditor.addTextComponent(getInsertIndex(), item.getContent());
   }
 
   /**
    * Adds Horizontal line.
    */
   private void renderHR() {
-    markDEditor.insertHorizontalDivider(false);
+    mdEditor.insertHorizontalDivider(false);
   }
 
   /**
@@ -115,7 +115,7 @@ public class RenderingUtils {
    *             Sets caption
    */
   private void renderImage(DraftDataItemModel item) {
-    markDEditor.insertImage(getInsertIndex(),item.getDownloadUrl(), true, item.getCaption());
+    mdEditor.insertImage(getInsertIndex(),item.getDownloadUrl(), true, item.getCaption());
   }
 
   /**
@@ -124,7 +124,7 @@ public class RenderingUtils {
    * @return insert index.
    */
   private int getInsertIndex() {
-    int index = markDEditor.getChildCount();
+    int index = mdEditor.getChildCount();
     return index;
   }
 }

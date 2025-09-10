@@ -1,12 +1,12 @@
-package xute.markdeditor.utilities;
+package com.armchairsoftware.mdeditor.utilities;
 
-import xute.markdeditor.Styles.TextComponentStyle;
+import com.armchairsoftware.mdeditor.Styles.TextComponentStyle;
 
-import static xute.markdeditor.Styles.TextComponentStyle.H1;
-import static xute.markdeditor.Styles.TextComponentStyle.H2;
-import static xute.markdeditor.Styles.TextComponentStyle.H3;
-import static xute.markdeditor.Styles.TextComponentStyle.H4;
-import static xute.markdeditor.Styles.TextComponentStyle.H5;
+import static com.armchairsoftware.mdeditor.Styles.TextComponentStyle.H1;
+import static com.armchairsoftware.mdeditor.Styles.TextComponentStyle.H2;
+import static com.armchairsoftware.mdeditor.Styles.TextComponentStyle.H3;
+import static com.armchairsoftware.mdeditor.Styles.TextComponentStyle.H4;
+import static com.armchairsoftware.mdeditor.Styles.TextComponentStyle.H5;
 
 public class FontSize {
   public static final int H1_SIZE = 32;

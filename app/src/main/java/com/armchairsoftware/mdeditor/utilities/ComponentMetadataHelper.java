@@ -1,6 +1,6 @@
-package xute.markdeditor.utilities;
+package com.armchairsoftware.mdeditor.utilities;
 
-import xute.markdeditor.models.ComponentTag;
+import com.armchairsoftware.mdeditor.models.ComponentTag;
 
 public class ComponentMetadataHelper {
   public static ComponentTag getNewComponentTag(int index) {

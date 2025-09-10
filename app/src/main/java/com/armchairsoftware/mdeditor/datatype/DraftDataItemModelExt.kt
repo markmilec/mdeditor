@@ -1,4 +1,4 @@
-package xute.markdeditor.datatype
+package com.armchairsoftware.mdeditor.datatype
 
 fun DraftDataItemModel.toDraftDataItemModelKt(): DraftDataItemModelKt {
     return DraftDataItemModelKt(

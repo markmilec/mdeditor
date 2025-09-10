@@ -1,4 +1,4 @@
-# MarkDEditor [![](https://jitpack.io/v/markmilec/mdeditor.svg)](https://jitpack.io/#markmilec/mdeditor)
+# MDEditor [![](https://jitpack.io/v/markmilec/mdeditor.svg)](https://jitpack.io/#markmilec/mdeditor)
 #### A Markdown Editor For Android.
 
 Your editor will look something like:
@@ -40,16 +40,16 @@ Step 3. Add XML declaration
   android:layout_width="match_parent"
   android:layout_height="match_parent">
 
- <xute.markdeditor.MarkDEditor
- <armchairsoftware.mdeditor.MarkDEditor
- <com.armchairsoftware.mdeditor.MarkDEditor
+ <com.armchairsoftware.mdeditor.MDEditor
+ <armchairsoftware.mdeditor
+ <com.armchairsoftware.mdeditor
   android:id="@+id/mdEditor"
   android:layout_width="match_parent"
   android:layout_height="match_parent" />
 
 </ScrollView>
 
-<xute.markdeditor.EditorControlBar
+<com.armchairsoftware.mdeditor.EditorControlBar
 <armchairsoftware.mdeditor.EditorControlBar
 <com.armchairsoftware.mdeditor.EditorControlBar
   android:id="@+id/controlBar"
@@ -60,10 +60,10 @@ Step 3. Add XML declaration
 
 Step 4. In Activity file
 ```java
-MarkDEditor markDEditor = findViewById(R.id.mdEditor);
+MDEditor mdEditor = findViewById(R.id.mdEditor);
 editorControlBar = findViewById(R.id.controlBar);
 editorControlBar.setEditorControlListener(this);
-markDEditor.configureEditor(
+mdEditor.configureEditor(
      "",//server url for image upload
      "",              //serverToken
      true,           // isDraft: set true when you are loading draft
@@ -71,8 +71,8 @@ markDEditor.configureEditor(
      NORMAL
     );
 //load draft
-//markDEditor.loadDraft(getDraftContent());
-editorControlBar.setEditor(markDEditor);
+//mdEditor.loadDraft(getDraftContent());
+editorControlBar.setEditor(mdEditor);
 ```
 
 Step 5. Implement Callback methods
@@ -84,31 +84,31 @@ Step 5. Implement Callback methods
 
   @Override
   public void onInserLinkClicked() {
-    //markDEditor.addLink("Click Here", "http://www.hapramp.com");
+    //mdEditor.addLink("Click Here", "http://www.hapramp.com");
     
   }
 ```
 
 **Inserting Image**
 ```java
-markDEditor.insertImage(filePath);
+mdEditor.insertImage(filePath);
 ```
 
 **Inserting Link**
 ```java
- markDEditor.addLink("Click Here", "http://www.hapramp.com");
+ mdEditor.addLink("Click Here", "http://www.hapramp.com");
 ```
 > Note: You can add take input for link using a DialogFragment.
 
 
 **Getting Markdown from Editor**
 ```java
-String md = markDEditor.getMarkdownContent();
+String md = mdEditor.getMarkdownContent();
 ```
 
 **Getting List of Images**
 ```java
-List<String> images = markDEditor.getImageList();
+List<String> images = mdEditor.getImageList();
 ```
 
 

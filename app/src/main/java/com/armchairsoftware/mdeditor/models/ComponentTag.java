@@ -1,4 +1,4 @@
-package xute.markdeditor.models;
+package com.armchairsoftware.mdeditor.models;
 
 public class ComponentTag {
   private int componentIndex;

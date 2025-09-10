@@ -1,4 +1,4 @@
-package xute.markdeditor.components
+package com.armchairsoftware.mdeditor.components
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
@@ -10,14 +10,14 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import coil.compose.rememberAsyncImagePainter
-import xute.markdeditor.MarkDEditorViewModel
-import xute.markdeditor.datatype.DraftDataItemModel
+import com.armchairsoftware.mdeditor.MDEditorViewModel
+import com.armchairsoftware.mdeditor.datatype.DraftDataItemModel
 
 @Composable
 fun ImageComponent(
     modifier: Modifier = Modifier,
     item: DraftDataItemModel,
-    viewModel: MarkDEditorViewModel
+    viewModel: MDEditorViewModel
 ) {
     var caption by remember { mutableStateOf(item.caption) }
 

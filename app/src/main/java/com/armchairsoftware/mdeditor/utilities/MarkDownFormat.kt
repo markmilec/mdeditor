@@ -1,11 +1,11 @@
-package xute.markdeditor.utilities
+package com.armchairsoftware.mdeditor.utilities
 
-import xute.markdeditor.Styles.TextComponentStyle.BLOCKQUOTE
-import xute.markdeditor.Styles.TextComponentStyle.H1
-import xute.markdeditor.Styles.TextComponentStyle.H2
-import xute.markdeditor.Styles.TextComponentStyle.H3
-import xute.markdeditor.Styles.TextComponentStyle.H4
-import xute.markdeditor.Styles.TextComponentStyle.H5
+import com.armchairsoftware.mdeditor.Styles.TextComponentStyle.BLOCKQUOTE
+import com.armchairsoftware.mdeditor.Styles.TextComponentStyle.H1
+import com.armchairsoftware.mdeditor.Styles.TextComponentStyle.H2
+import com.armchairsoftware.mdeditor.Styles.TextComponentStyle.H3
+import com.armchairsoftware.mdeditor.Styles.TextComponentStyle.H4
+import com.armchairsoftware.mdeditor.Styles.TextComponentStyle.H5
 
 object MarkDownFormat {
 

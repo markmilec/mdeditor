@@ -4,7 +4,7 @@ apply plugin: 'kotlin-android'
 android {
     compileSdkVersion 29
     defaultConfig {
-        applicationId "xute.markeditor"
+        applicationId "com.armchairsoftware.mdeditor.markeditor"
         minSdkVersion 16
         targetSdkVersion 29
         versionCode 2
@@ -27,7 +27,7 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.6'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
-    implementation project(':markdeditor')
+    implementation project(':mdeditor')
     implementation "androidx.core:core-ktx:1.3.0"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }

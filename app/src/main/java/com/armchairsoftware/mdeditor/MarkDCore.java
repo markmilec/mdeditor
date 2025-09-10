@@ -1,4 +1,4 @@
-package xute.markdeditor;
+package com.armchairsoftware.mdeditor;
 
 import android.content.Context;
 import androidx.annotation.Nullable;
@@ -9,10 +9,10 @@ import android.widget.LinearLayout;
 
 import java.util.ArrayList;
 
-import xute.markdeditor.components.TextComponentItem;
-import xute.markdeditor.models.BulletGroupModel;
+import com.armchairsoftware.mdeditor.components.TextComponentItem;
+import com.armchairsoftware.mdeditor.models.BulletGroupModel;
 
-import static xute.markdeditor.components.TextComponentItem.MODE_OL;
+import static com.armchairsoftware.mdeditor.components.TextComponentItem.MODE_OL;
 
 public class MarkDCore extends LinearLayout {
   ArrayList<BulletGroupModel> bulletGroupModels;

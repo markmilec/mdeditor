@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import armchairsoftware.mdeditor.R
 import com.google.gson.Gson
 import armchairsoftware.mdeditor.EditorControlBar
-import armchairsoftware.mdeditor.MarkDEditor
+import armchairsoftware.mdeditor
 import armchairsoftware.mdeditor.Styles.TextComponentStyle.*
 import armchairsoftware.mdeditor.components.TextComponentItem.MODE_OL
 import armchairsoftware.mdeditor.components.TextComponentItem.MODE_PLAIN
@@ -19,7 +19,7 @@ import armchairsoftware.mdeditor.models.DraftModel
 import armchairsoftware.mdeditor.utilities.FilePathUtils
 
 class MainActivity : AppCompatActivity(), EditorControlBar.EditorControlListener {
-    private lateinit var markDEditor: MarkDEditor
+    private lateinit var mdEditor: MDEditor
     private lateinit var editorControlBar: EditorControlBar
 
     private val openGalleryLauncher =
@@ -43,18 +43,18 @@ class MainActivity : AppCompatActivity(), EditorControlBar.EditorControlListener
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        markDEditor = findViewById(R.id.mdEditor)
-        markDEditor.configureEditor(
+        mdEditor = findViewById(R.id.mdEditor)
+        mdEditor.configureEditor(
             "https://your-api-server.com/api/v2/",
             "",
             true,
             "Start Here...",
             BLOCKQUOTE
         )
-        markDEditor.loadDraft(getDraftContent())
+        mdEditor.loadDraft(getDraftContent())
         editorControlBar = findViewById(R.id.controlBar)
         editorControlBar.setEditorControlListener(this)
-        editorControlBar.setEditor(markDEditor)
+        editorControlBar.setEditor(mdEditor)
     }
 
     private fun getDraftContent(): DraftModel {
@@ -82,7 +82,7 @@ class MainActivity : AppCompatActivity(), EditorControlBar.EditorControlListener
     }
 
     private fun addImage(filePath: String) {
-        markDEditor.insertImage(filePath)
+        mdEditor.insertImage(filePath)
     }
 
     private fun openGallery() {
@@ -94,7 +94,7 @@ class MainActivity : AppCompatActivity(), EditorControlBar.EditorControlListener
     }
 
     override fun onInserLinkClicked() {
-        markDEditor.addLink("Click Here", "https://your-website.com")
+        mdEditor.addLink("Click Here", "https://your-website.com")
     }
 
     fun printStack(view: View) {
@@ -102,8 +102,8 @@ class MainActivity : AppCompatActivity(), EditorControlBar.EditorControlListener
     }
 
     private fun sendMail() {
-        val dm = markDEditor.getDraft()
+        val dm = mdEditor.getDraft()
         val json = Gson().toJson(dm)
-        Log.d("MarkDEditor", json)
+        Log.d("MDEditor", json)
     }
 }

@@ -1,4 +1,4 @@
-package xute.markdeditor
+package com.armchairsoftware.mdeditor
 
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
@@ -6,15 +6,15 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.lifecycle.viewmodel.compose.viewModel
-import xute.markdeditor.components.HorizontalDividerComponent
-import xute.markdeditor.components.ImageComponent
-import xute.markdeditor.components.TextComponent
-import xute.markdeditor.datatype.DraftDataItemModel
-import xute.markdeditor.models.DraftModel
+import com.armchairsoftware.mdeditor.components.HorizontalDividerComponent
+import com.armchairsoftware.mdeditor.components.ImageComponent
+import com.armchairsoftware.mdeditor.components.TextComponent
+import com.armchairsoftware.mdeditor.datatype.DraftDataItemModel
+import com.armchairsoftware.mdeditor.models.DraftModel
 
 @Composable
-fun MarkDEditor(
-    viewModel: MarkDEditorViewModel = viewModel()
+fun MDEditor(
+    viewModel: MDEditorViewModel = viewModel()
 ) {
     val draft by viewModel.draft.collectAsState()
     LazyColumn {

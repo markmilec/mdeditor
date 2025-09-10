@@ -1,4 +1,4 @@
-package xute.markdeditor.datatype;
+package com.armchairsoftware.mdeditor.datatype;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

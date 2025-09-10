@@ -1,6 +1,6 @@
-package xute.markdeditor.models;
+package com.armchairsoftware.mdeditor.models;
 
-import static xute.markdeditor.Styles.TextComponentStyle.NORMAL;
+import static com.armchairsoftware.mdeditor.Styles.TextComponentStyle.NORMAL;
 
 public class TextComponentModel extends BaseComponentModel {
   private int headingStyle = NORMAL;

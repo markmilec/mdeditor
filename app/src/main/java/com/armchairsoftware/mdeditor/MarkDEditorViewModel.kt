@@ -1,17 +1,17 @@
-package xute.markdeditor
+package com.armchairsoftware.mdeditor
 
 import androidx.lifecycle.ViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
-import xute.markdeditor.models.DraftModel
-import xute.markdeditor.datatype.DraftDataItemModel
-import xute.markdeditor.datatype.toDraftDataItemModelKt
-import xute.markdeditor.components.TextComponentItem.MODE_OL
-import xute.markdeditor.components.TextComponentItem.MODE_UL
-import xute.markdeditor.Styles.TextComponentStyle
-import xute.markdeditor.utilities.MarkDownConverter
+import com.armchairsoftware.mdeditor.models.DraftModel
+import com.armchairsoftware.mdeditor.datatype.DraftDataItemModel
+import com.armchairsoftware.mdeditor.datatype.toDraftDataItemModelKt
+import com.armchairsoftware.mdeditor.components.TextComponentItem.MODE_OL
+import com.armchairsoftware.mdeditor.components.TextComponentItem.MODE_UL
+import com.armchairsoftware.mdeditor.Styles.TextComponentStyle
+import com.armchairsoftware.mdeditor.utilities.MarkDownConverter
 
-class MarkDEditorViewModel : ViewModel() {
+class MDEditorViewModel : ViewModel() {
     private val _draft = MutableStateFlow(DraftModel())
     val draft: StateFlow<DraftModel> = _draft
 

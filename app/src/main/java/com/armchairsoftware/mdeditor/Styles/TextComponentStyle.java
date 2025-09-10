@@ -1,4 +1,4 @@
-package xute.markdeditor.Styles;
+package com.armchairsoftware.mdeditor.Styles;
 
 public class TextComponentStyle {
   public static final int NORMAL = 0;

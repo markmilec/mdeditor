@@ -1,4 +1,4 @@
-package xute.markeditor;
+package com.armchairsoftware.mdeditor.markeditor;
 
 import org.junit.Test;
 

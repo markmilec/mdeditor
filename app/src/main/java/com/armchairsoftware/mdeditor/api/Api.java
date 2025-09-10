@@ -1,4 +1,4 @@
-package xute.markdeditor.api;
+package com.armchairsoftware.mdeditor.api;
 
 import okhttp3.MultipartBody;
 import retrofit2.Call;

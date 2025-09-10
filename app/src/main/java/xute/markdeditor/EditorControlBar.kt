@@ -1,5 +1,4 @@
 package com.armchairsoftware.mdeditor
-package armchairsoftware.mdeditor
 
 import androidx.compose.foundation.layout.Row
 import androidx.compose.material.Icon
@@ -31,7 +30,6 @@ import androidx.compose.material.icons.filled.ThumbUp
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import com.armchairsoftware.mdeditor.Styles.TextComponentStyle
-import armchairsoftware.mdeditor.Styles.TextComponentStyle
 
 @Composable
 fun EditorControlBar(

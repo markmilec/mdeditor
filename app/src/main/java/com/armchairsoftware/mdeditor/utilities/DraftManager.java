@@ -1,22 +1,22 @@
-package xute.markdeditor.utilities;
+package com.armchairsoftware.mdeditor.utilities;
 
 import android.view.View;
 
 import java.util.ArrayList;
 
-import xute.markdeditor.MarkDEditor;
-import xute.markdeditor.components.HorizontalDividerComponentItem;
-import xute.markdeditor.components.ImageComponentItem;
-import xute.markdeditor.components.TextComponentItem;
-import xute.markdeditor.datatype.DraftDataItemModel;
-import xute.markdeditor.models.ComponentTag;
-import xute.markdeditor.models.DraftModel;
-import xute.markdeditor.models.TextComponentModel;
+import com.armchairsoftware.mdeditor.MDEditor;
+import com.armchairsoftware.mdeditor.components.HorizontalDividerComponentItem;
+import com.armchairsoftware.mdeditor.components.ImageComponentItem;
+import com.armchairsoftware.mdeditor.components.TextComponentItem;
+import com.armchairsoftware.mdeditor.datatype.DraftDataItemModel;
+import com.armchairsoftware.mdeditor.models.ComponentTag;
+import com.armchairsoftware.mdeditor.models.DraftModel;
+import com.armchairsoftware.mdeditor.models.TextComponentModel;
 
-import static xute.markdeditor.Styles.TextComponentStyle.NORMAL;
-import static xute.markdeditor.components.TextComponentItem.MODE_OL;
-import static xute.markdeditor.components.TextComponentItem.MODE_PLAIN;
-import static xute.markdeditor.components.TextComponentItem.MODE_UL;
+import static com.armchairsoftware.mdeditor.Styles.TextComponentStyle.NORMAL;
+import static com.armchairsoftware.mdeditor.components.TextComponentItem.MODE_OL;
+import static com.armchairsoftware.mdeditor.components.TextComponentItem.MODE_PLAIN;
+import static com.armchairsoftware.mdeditor.components.TextComponentItem.MODE_UL;
 
 public class DraftManager {
   public DraftManager() {
@@ -25,17 +25,17 @@ public class DraftManager {
 
   /**
    * Traverse through each item and prepares the draft item list.
-   * @param markDEditor editor object.
+   * @param mdEditor editor object.
    * @return a list of Draft Item types.
    */
-  public DraftModel processDraftContent(MarkDEditor markDEditor) {
+  public DraftModel processDraftContent(MDEditor mdEditor) {
     ArrayList<DraftDataItemModel> drafts = new ArrayList<>();
-    int childCount = markDEditor.getChildCount();
+    int childCount = mdEditor.getChildCount();
     View view;
     int textStyle;
     ComponentTag componentTag;
     for (int i = 0; i < childCount; i++) {
-      view = markDEditor.getChildAt(i);
+      view = mdEditor.getChildAt(i);
       if (view instanceof TextComponentItem) {
         //check mode
         int mode = ((TextComponentItem) view).getMode();

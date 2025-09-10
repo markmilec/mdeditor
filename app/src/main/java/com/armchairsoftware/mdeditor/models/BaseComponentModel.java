@@ -1,4 +1,4 @@
-package xute.markdeditor.models;
+package com.armchairsoftware.mdeditor.models;
 
 public class BaseComponentModel {
   private String componentType;

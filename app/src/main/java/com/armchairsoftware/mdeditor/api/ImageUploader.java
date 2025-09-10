@@ -1,4 +1,4 @@
-package xute.markdeditor.api;
+package com.armchairsoftware.mdeditor.api;
 
 import java.io.File;
 

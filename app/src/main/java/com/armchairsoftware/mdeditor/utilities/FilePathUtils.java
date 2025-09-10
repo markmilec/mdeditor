@@ -1,4 +1,4 @@
-package xute.markdeditor.utilities;
+package com.armchairsoftware.mdeditor.utilities;
 
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;

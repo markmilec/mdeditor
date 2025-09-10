@@ -1,4 +1,4 @@
-package xute.markdeditor.components
+package com.armchairsoftware.mdeditor.components
 
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.text.BasicTextField
@@ -15,17 +15,17 @@ import androidx.compose.ui.focus.onFocusChanged
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
-import xute.markdeditor.MarkDEditorViewModel
-import xute.markdeditor.Styles.TextComponentStyle
-import xute.markdeditor.datatype.DraftDataItemModel
-import xute.markdeditor.components.TextComponentItem.MODE_OL
-import xute.markdeditor.components.TextComponentItem.MODE_UL
+import com.armchairsoftware.mdeditor.MDEditorViewModel
+import com.armchairsoftware.mdeditor.Styles.TextComponentStyle
+import com.armchairsoftware.mdeditor.datatype.DraftDataItemModel
+import com.armchairsoftware.mdeditor.components.TextComponentItem.MODE_OL
+import com.armchairsoftware.mdeditor.components.TextComponentItem.MODE_UL
 
 @Composable
 fun TextComponent(
     modifier: Modifier = Modifier,
     item: DraftDataItemModel,
-    viewModel: MarkDEditorViewModel,
+    viewModel: MDEditorViewModel,
     index: Int
 ) {
     var text by remember { mutableStateOf(item.content) }

@@ -1,4 +1,4 @@
-package xute.markeditor;
+package com.armchairsoftware.mdeditor.markeditor;
 
 import android.Manifest;
 import android.app.Activity;
@@ -16,40 +16,40 @@ import com.google.gson.Gson;
 
 import java.util.ArrayList;
 
-import xute.markdeditor.EditorControlBar;
-import xute.markdeditor.MarkDEditor;
-import xute.markdeditor.datatype.DraftDataItemModel;
-import xute.markdeditor.models.DraftModel;
-import xute.markdeditor.utilities.FilePathUtils;
+import com.armchairsoftware.mdeditor.EditorControlBar;
+import com.armchairsoftware.mdeditor.MDEditor;
+import com.armchairsoftware.mdeditor.datatype.DraftDataItemModel;
+import com.armchairsoftware.mdeditor.models.DraftModel;
+import com.armchairsoftware.mdeditor.utilities.FilePathUtils;
 
-import static xute.markdeditor.Styles.TextComponentStyle.BLOCKQUOTE;
-import static xute.markdeditor.Styles.TextComponentStyle.H1;
-import static xute.markdeditor.Styles.TextComponentStyle.H3;
-import static xute.markdeditor.Styles.TextComponentStyle.NORMAL;
-import static xute.markdeditor.components.TextComponentItem.MODE_OL;
-import static xute.markdeditor.components.TextComponentItem.MODE_PLAIN;
+import static com.armchairsoftware.mdeditor.Styles.TextComponentStyle.BLOCKQUOTE;
+import static com.armchairsoftware.mdeditor.Styles.TextComponentStyle.H1;
+import static com.armchairsoftware.mdeditor.Styles.TextComponentStyle.H3;
+import static com.armchairsoftware.mdeditor.Styles.TextComponentStyle.NORMAL;
+import static com.armchairsoftware.mdeditor.components.TextComponentItem.MODE_OL;
+import static com.armchairsoftware.mdeditor.components.TextComponentItem.MODE_PLAIN;
 
 public class MainActivity extends AppCompatActivity implements EditorControlBar.EditorControlListener {
   private final int REQUEST_IMAGE_SELECTOR = 110;
-  private MarkDEditor markDEditor;
+  private MDEditor mdEditor;
   private EditorControlBar editorControlBar;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
-    markDEditor = findViewById(R.id.mdEditor);
-    markDEditor.configureEditor(
+    mdEditor = findViewById(R.id.mdEditor);
+    mdEditor.configureEditor(
      "https://api.hapramp.com/api/v2/",
      "",
      true,
      "Start Here...",
      BLOCKQUOTE
     );
-    markDEditor.loadDraft(getDraftContent());
+    mdEditor.loadDraft(getDraftContent());
     editorControlBar = findViewById(R.id.controlBar);
     editorControlBar.setEditorControlListener(this);
-    editorControlBar.setEditor(markDEditor);
+    editorControlBar.setEditor(mdEditor);
   }
 
   private DraftModel getDraftContent() {
@@ -124,7 +124,7 @@ public class MainActivity extends AppCompatActivity implements EditorControlBar.
   }
 
   public void addImage(String filePath) {
-    markDEditor.insertImage(filePath);
+    mdEditor.insertImage(filePath);
   }
 
   @Override
@@ -164,7 +164,7 @@ public class MainActivity extends AppCompatActivity implements EditorControlBar.
 
   @Override
   public void onInserLinkClicked() {
-    markDEditor.addLink("Click Here", "http://www.hapramp.com");
+    mdEditor.addLink("Click Here", "http://www.hapramp.com");
   }
 
   public void printStack(View view) {
@@ -172,8 +172,8 @@ public class MainActivity extends AppCompatActivity implements EditorControlBar.
   }
 
   private void sendMail() {
-    DraftModel dm = markDEditor.getDraft();
+    DraftModel dm = mdEditor.getDraft();
     String json = new Gson().toJson(dm);
-    Log.d("MarkDEditor", json);
+    Log.d("MDEditor", json);
   }
 }

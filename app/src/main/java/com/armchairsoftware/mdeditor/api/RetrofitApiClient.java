@@ -1,4 +1,4 @@
-package xute.markdeditor.api;
+package com.armchairsoftware.mdeditor.api;
 
 import java.io.IOException;
 
@@ -9,7 +9,7 @@ import okhttp3.Response;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
-import xute.markdeditor.MarkDEditor;
+import com.armchairsoftware.mdeditor.MDEditor;
 
 public class RetrofitApiClient {
   private static Retrofit retrofit = null;
@@ -33,7 +33,7 @@ public class RetrofitApiClient {
      .build();
 
     retrofit = new Retrofit.Builder()
-     .baseUrl(MarkDEditor.getServerUrl())
+     .baseUrl(MDEditor.getServerUrl())
      .addConverterFactory(GsonConverterFactory.create())
      .client(client)
      .build();

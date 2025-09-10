@@ -1,7 +1,7 @@
-package xute.markdeditor.utilities
+package com.armchairsoftware.mdeditor.utilities
 
-import xute.markdeditor.models.DraftModel
-import xute.markdeditor.components.TextComponentItem
+import com.armchairsoftware.mdeditor.models.DraftModel
+import com.armchairsoftware.mdeditor.components.TextComponentItem
 
 object MarkDownConverter {
     fun toMarkdown(draft: DraftModel): String {

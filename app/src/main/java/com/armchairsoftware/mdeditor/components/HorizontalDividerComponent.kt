@@ -1,4 +1,4 @@
-package xute.markdeditor.components
+package com.armchairsoftware.mdeditor.components
 
 import androidx.compose.material.Divider
 import androidx.compose.runtime.Composable

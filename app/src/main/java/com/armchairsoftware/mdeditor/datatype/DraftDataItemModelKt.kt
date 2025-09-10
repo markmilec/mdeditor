@@ -1,4 +1,4 @@
-package xute.markdeditor.datatype
+package com.armchairsoftware.mdeditor.datatype
 
 data class DraftDataItemModelKt(
     val itemType: Int,

@@ -1,11 +1,11 @@
-package xute.markdeditor;
+package com.armchairsoftware.mdeditor;
 
 import org.junit.Test;
 
 import java.util.ArrayList;
 
-import xute.markdeditor.datatype.DraftDataItemModel;
-import xute.markdeditor.utilities.RenderingUtils;
+import com.armchairsoftware.mdeditor.datatype.DraftDataItemModel;
+import com.armchairsoftware.mdeditor.utilities.RenderingUtils;
 
 /**
  * Example local unit test, which will execute on the development machine (host).

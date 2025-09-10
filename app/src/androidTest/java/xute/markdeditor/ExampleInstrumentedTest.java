@@ -1,4 +1,4 @@
-package xute.markdeditor;
+package com.armchairsoftware.mdeditor;
 
 import android.content.Context;
 import androidx.test.platform.app.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     // Context of the app under test.
     Context appContext = InstrumentationRegistry.getTargetContext();
 
-    assertEquals("xute.markdeditor.test", appContext.getPackageName());
+    assertEquals("com.armchairsoftware.mdeditor.test", appContext.getPackageName());
   }
 }
