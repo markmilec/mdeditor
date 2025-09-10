@@ -1,17 +1,17 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
+    id("org.jetbrains.kotlin.plugin.compose") version "2.2.10"
 }
 
 android {
     namespace = "com.armchairsoftware.mdeditor"
-    compileSdk = 34
+    compileSdk = 36
 
     defaultConfig {
-        minSdk = 21
-        targetSdk = 34
-        versionCode 5
-        versionName "1.3"
+        minSdk = 33
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -22,22 +22,22 @@ android {
         }
     }
 
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_21
+        targetCompatibility = JavaVersion.VERSION_21
+    }
+    kotlin {
+        compilerOptions {
+            jvmTarget.set(JvmTarget.JVM_21)
+            javaParameters.set(true)
+        }
+    }
+
     buildFeatures {
         compose = true
+        buildConfig = true
     }
-
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.14"
-    }
-
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
-    }
-
-    kotlinOptions {
-        jvmTarget = "1.8"
-    }
+    buildToolsVersion = "36.0.0"
 }
 
 dependencies {

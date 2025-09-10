@@ -7,16 +7,14 @@ import android.view.View
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
-import armchairsoftware.mdeditor.R
 import com.google.gson.Gson
-import armchairsoftware.mdeditor.EditorControlBar
-import armchairsoftware.mdeditor
-import armchairsoftware.mdeditor.Styles.TextComponentStyle.*
-import armchairsoftware.mdeditor.components.TextComponentItem.MODE_OL
-import armchairsoftware.mdeditor.components.TextComponentItem.MODE_PLAIN
-import armchairsoftware.mdeditor.datatype.DraftDataItemModel
-import armchairsoftware.mdeditor.models.DraftModel
-import armchairsoftware.mdeditor.utilities.FilePathUtils
+import com.armchairsoftware.mdeditor.EditorControlBar
+import com.armchairsoftware.mdeditor.Styles.TextComponentStyle.*
+import com.armchairsoftware.mdeditor.components.TextComponentItem.MODE_OL
+import com.armchairsoftware.mdeditor.components.TextComponentItem.MODE_PLAIN
+import com.armchairsoftware.mdeditor.datatype.DraftDataItemModel
+import com.armchairsoftware.mdeditor.models.DraftModel
+import com.armchairsoftware.mdeditor.utilities.FilePathUtils
 
 class MainActivity : AppCompatActivity(), EditorControlBar.EditorControlListener {
     private lateinit var mdEditor: MDEditor

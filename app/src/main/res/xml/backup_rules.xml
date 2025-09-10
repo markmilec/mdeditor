@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <!-- TODO: Add <include> and <exclude> rules here to configure what is backed up.
+    By default, all files are backed up.
+    Read more at https://developer.android.com/guide/topics/data/autobackup -->
+    <!-- <include domain="file" path="."/> -->
+    <!-- <include domain="database" path="."/> -->
+    <!-- <include domain="sharedpref" path="."/> -->
+    <!-- <include domain="external" path="."/> -->
+    <!-- <include domain="root" path="."/> -->
+
+    <!-- Example of excluding a specific file:
+    <exclude domain="sharedpref" path="device.xml"/> -->
+</full-backup-content>
