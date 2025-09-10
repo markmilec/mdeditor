@@ -1,4 +1,4 @@
-# MarkDEditor [![](https://jitpack.io/v/bxute/MarkDEditor.svg)](https://jitpack.io/#bxute/MarkDEditor)
+# MarkDEditor [![](https://jitpack.io/v/markmilec/mdeditor.svg)](https://jitpack.io/#markmilec/mdeditor)
 #### A Markdown Editor For Android.
 
 Your editor will look something like:
@@ -28,7 +28,7 @@ Your editor will look something like:
 Step 2. Add the dependency
 ```groovy
 dependencies {
-  implementation 'com.github.bxute:MarkDEditor:v0.16'
+  implementation 'com.github.markmilec:mdeditor:v0.16'
 }
 ```
 
@@ -41,6 +41,8 @@ Step 3. Add XML declaration
   android:layout_height="match_parent">
 
  <xute.markdeditor.MarkDEditor
+ <armchairsoftware.mdeditor.MarkDEditor
+ <com.armchairsoftware.mdeditor.MarkDEditor
   android:id="@+id/mdEditor"
   android:layout_width="match_parent"
   android:layout_height="match_parent" />
@@ -48,6 +50,8 @@ Step 3. Add XML declaration
 </ScrollView>
 
 <xute.markdeditor.EditorControlBar
+<armchairsoftware.mdeditor.EditorControlBar
+<com.armchairsoftware.mdeditor.EditorControlBar
   android:id="@+id/controlBar"
   android:layout_alignParentBottom="true"
   android:layout_width="match_parent"
@@ -134,5 +138,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
-
