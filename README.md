@@ -1,5 +1,4 @@
 # MarkDEditor [![](https://jitpack.io/v/bxute/MarkDEditor.svg)](https://jitpack.io/#bxute/MarkDEditor)
-# MarkDEditor [![](https://jitpack.io/v/markmilec/mdeditor.svg)](https://jitpack.io/#markmilec/mdeditor)
 #### A Markdown Editor For Android.
 
 Your editor will look something like:
@@ -30,7 +29,6 @@ Step 2. Add the dependency
 ```groovy
 dependencies {
   implementation 'com.github.bxute:MarkDEditor:v0.16'
-  implementation 'com.github.markmilec:mdeditor:v0.16'
 }
 ```
 
